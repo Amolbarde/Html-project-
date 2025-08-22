@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:red;
+        }
+.b1{
+    color: rgb(59, 6, 203);
+    padding: 10px;
+    width: 35%;
+   border: none;
+   border-radius: 30px;
+}
+.b2{
+    border: none;
+    color: blue;
+    background-color: #FF0066;
+    color: cyan;
+    font-size: 15px;
+}
+.b2:hover{
+    background-color:#3399ff;
+    color: white;
+}
+    </style>
+</head>
+<body background="pc1 - Copy.jpeg">
+    <center><h1>Welcome</h1></center>
+    <hr>
+
+<br>
+
+        <table border="1" width="20%" height="400px" align="center" bgcolor="black">
+            <tr  onmouseout="show1()" id="aa" onmouseover="show()" align="center" bgcolor="yellow">
+                <th colspan="2">
+                    <font size="10">Sign up</font>
+                </th>
+                
+            </tr>
+            <tr>
+                <th><font color="yellow">
+                <label>Name</label>
+            </font>
+                </th>
+                <th><input id="aaa" type="text"></th>
+            </tr>
+            <tr>
+                <th><font color="yellow">
+                    <label>Age</label>
+                </font></th>
+                <th><input  id="aaa1" type="data"></th>
+            </tr>
+            <tr>
+                <th><font color="yellow"><label>Mobile Number</label></font></th>
+                <th><input type="number" required></th>
+            </tr>
+            <tr>
+                <th>
+                    <font color="yellow">Gender</font> </th>
+                    <th><font color="white"><input type="radio" name="gender">male
+                        <input type="radio" name="gender">Fmale
+                    </font></th>
+                
+            
+               
+            </tr>
+            <tr>
+                <th>
+                    <font color="yellow"><label>Country</label></font>
+                </th>
+                <th>
+                    <select name="country">
+                    <option value="india">India</option>
+                    <option value="colembia">colembia</option>
+                    <option value="shrianka">Shrilanka</option>
+                    <option value="Pakisthan">Pakisthan</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="brazil">brazil</option>
+                    </select>
+                </th>
+            </tr>
+            <tr id="bb"  align="center" bgcolor="yellow">
+                <th colspan="2"><button class="b1 b2">submit</button>       &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;
+                    <button class="b1 b2">reset</button></th>
+            </tr>
+        </table>   
+</body> 
+<script>
+    var b1=document.getElementById("aaa");
+    b1.style.color="red";
+    function show()
+    {
+        var a=document.getElementById("aa");
+
+        var bb=document.getElementById("bbb1");
+            var b=document.getElementById("bb");
+        a.style.background="cyan";
+        b.style.background="cyan";
+        a.style.color="blue";
+        bb.style.color="red";
+    }
+
+    function show1()
+    {
+        var b=document.getElementById("bb");
+        var a=document.getElementById("aa");
+        a.style.background="yellow";
+        b.style.background="yellow";
+        a.style.color="#CC0066";
+    }
+    
+    </script>
+</html>
