@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box"></div>
+
+    <center>
+        <div class="calculator">
+            <font size="5"><b>Calculator</b></font>
+            <hr><br>
+
+            <input type="text" id="a" readonly>
+            <br>
+
+            <button onclick="addVal('1')">1</button>
+            <button onclick="addVal('2')">2</button>
+            <button onclick="addVal('3')">3</button>
+            <button class="clear" onclick="clearValue()">C</button>
+            <br>
+
+            <button onclick="addVal('4')">4</button>
+            <button onclick="addVal('5')">5</button>
+            <button onclick="addVal('6')">6</button>
+            <button class="op" onclick="addVal('+')">+</button>
+            <br>
+
+            <button onclick="addVal('7')">7</button>
+            <button onclick="addVal('8')">8</button>
+            <button onclick="addVal('9')">9</button>
+            <button class="op" onclick="addVal('-')">-</button>
+            <br>
+
+            <button onclick="addVal('0')">0</button>
+            <button class="op" onclick="addVal('*')">*</button>
+            <button class="eq" onclick="Cal()">=</button>
+            <button class="op" onclick="addVal('/')">/</button>
+            <br>
+
+        </div>
+    </center>
+</div>
+
+<script>
+let disp = document.getElementById("a");
+
+function addVal(v){
+    disp.value += v;
+}
+
+function clearValue(){
+    disp.value = "";
+}
+
+function Cal(){
+    try{
+        disp.value = eval(disp.value);
+    }catch{
+        disp.value = "Error";
+    }
+}
+</script>
+
+</body>
+</html>
